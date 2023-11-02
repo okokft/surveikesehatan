@@ -21,58 +21,62 @@
     <section class="content">
 
     <div class="row">
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-          <span class="info-box-icon bg-info"><i class="fas fa-users"></i></span>
+      <!-- 1 -->
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3><?= $datadashboard['kk'] ?></h3>
 
-          <div class="info-box-content">
-            <span class="info-box-text">Jumlah Keluarga</span>
-            <span class="info-box-number"><?= $datadashboard['kk'] ?></span>
+            <p>Jumlah Keluarga</p>
           </div>
-          <!-- /.info-box-content -->
+          <div class="icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <a href="<?= base_url('datakk/all') ?>" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
         </div>
-        <!-- /.info-box -->
       </div>
-      <!-- /.col -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-          <span class="info-box-icon bg-warning"><i class="fas fa-user-alt"></i></span>
+      <!-- 2 -->
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-primary">
+          <div class="inner">
+            <h3><?= $datadashboard['nik'] ?></h3>
 
-          <div class="info-box-content">
-            <span class="info-box-text">Jumlah NIK</span>
-            <span class="info-box-number"><?= $datadashboard['nik'] ?></span>
+            <p>Jumlah NIK</p>
           </div>
-          <!-- /.info-box-content -->
+          <div class="icon">
+            <i class="fas fa-user-alt"></i>
+          </div>
+          <a href="<?= base_url('datakk/all') ?>" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
         </div>
-        <!-- /.info-box -->
       </div>
-      <!-- /.col -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-          <span class="info-box-icon bg-success"><i class="fas fa-briefcase-medical"></i></span>
+      <!-- 3 -->
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-success">
+          <div class="inner">
+            <h3><?= $datadashboard['sehat'] ?></h3>
 
-          <div class="info-box-content">
-            <span class="info-box-text">Keluarga Sehat</span>
-            <span class="info-box-number"><?= $datadashboard['sehat'] ?></span>
+            <p>Keluarga Sehat</p>
           </div>
-          <!-- /.info-box-content -->
+          <div class="icon">
+            <i class="fas fa-briefcase-medical"></i>
+          </div>
+          <a href="<?= base_url('datakk/sehat') ?>" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
         </div>
-        <!-- /.info-box -->
       </div>
-      <!-- /.col -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box">
-          <span class="info-box-icon bg-danger"><i class='fas fa-exclamation-triangle'></i></span>
+      <!-- 4 -->
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-danger">
+          <div class="inner">
+            <h3><?= $datadashboard['tidaksehat'] ?></h3>
 
-          <div class="info-box-content">
-            <span class="info-box-text">Keluarga Tidak Sehat</span>
-            <span class="info-box-number"><?= $datadashboard['tidaksehat'] ?></span>
+            <p>Keluarga Tidak Sehat</p>
           </div>
-          <!-- /.info-box-content -->
+          <div class="icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <a href="<?= base_url('datakk/tidaksehat') ?>" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
         </div>
-        <!-- /.info-box -->
       </div>
-      <!-- /.col -->
     </div>
 
     </section>

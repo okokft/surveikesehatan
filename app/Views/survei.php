@@ -33,11 +33,10 @@
       Survei Kesehatan
     </div>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">Survei ini untuk mengetahui Keluarga Anda termasuk Keluarga Sehat atau Keluarga Tidak Sehat</p>
     </div>
     <div class="card-footer text-muted">
-      2 days ago
+      <?= date("d/m/Y") ?>
     </div>
   </div>
 
@@ -323,7 +322,7 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-          Kata Kata Hari Ini
+          Kekayaan yang paling utama adalah <b>Kesehatan</b>
         </div>
       </div>
       <!-- /.card -->

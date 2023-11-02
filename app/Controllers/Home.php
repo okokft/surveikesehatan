@@ -63,7 +63,7 @@ class Home extends BaseController
         echo view('partials/footer');
     }   
 
-    public function datakk()
+    public function datakk($segment)
     {
         session();
         if(session('nama') == null){
@@ -74,6 +74,8 @@ class Home extends BaseController
 
         $no = 1;
         $arrkk = [];
+        $arrsehat = [];
+        $arrtidaksehat = [];
         foreach($query as $d){
             $arr = [];
 
@@ -103,19 +105,32 @@ class Home extends BaseController
 
             if($skorsehat >= 7){
                 $arr['status'] = '<p class="text-success">SEHAT</p>';
+                $arrsehat[] = $arr;
             }
             else{
                 $arr['status'] = '<p class="text-danger">TIDAK SEHAT</p>';
+                $arrtidaksehat[] = $arr;
             }
 
             $arrkk[] = $arr;
         };
 
-        $datakirim['query'] = $arrkk;
+        if($segment == "all"){
+            $datakirim['query'] = $arrkk;
+            $header['title']='Data KK';
+        }
+        else if($segment == "sehat"){
+            $datakirim['query'] = $arrsehat;
+            $header['title']='Data Keluarga Sehat';
+        }
+        else if($segment == "tidaksehat"){
+            $datakirim['query'] = $arrtidaksehat;
+            $header['title']='Data Keluarga Tidak Sehat';
+        }
+        
         // print_r(json_encode($datakirim['query']));
         // die();
 
-        $header['title']='Data KK';
         echo view('partials/header',$header);
         echo view('partials/navbar');
         echo view('partials/sidebar');
